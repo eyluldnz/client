@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { IProduct } from './models/IProduct';
 
 @Component({
   selector: 'app-root',
@@ -8,15 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'client';
-  products:any=[];
+ 
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.http.get("https://nonchalant-fang.glitch.me/listing").subscribe((response: any) => {
-      this.products=response;
-      console.log(response);
-    }, error => console.log(error)
-    )
   }
 }

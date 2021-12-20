@@ -4,17 +4,19 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ShopModule } from './shop/shop.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent //ng g c ile komut yazılarak eklendiği için otomatik buraya aktarıldı.
+    NavbarComponent,//ng g c ile komut yazılarak eklendiği için otomatik buraya aktarıldı.,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    ShopModule
   ],
   providers: [],
   bootstrap: [AppComponent]
